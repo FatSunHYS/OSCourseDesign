@@ -334,6 +334,9 @@ fastcall void __kprobes do_page_fault(struct pt_regs *regs,
 	unsigned long address;
 	unsigned long page;
 	int write, si_code;
+	extern long page_fault_counter;
+
+	++page_fault_counter;
 
 	/* get the address */
         address = read_cr2();
@@ -341,6 +344,7 @@ fastcall void __kprobes do_page_fault(struct pt_regs *regs,
 	tsk = current;
 
 	si_code = SEGV_MAPERR;
+
 
 	/*
 	 * We fault-in kernel-space virtual memory on-demand. The

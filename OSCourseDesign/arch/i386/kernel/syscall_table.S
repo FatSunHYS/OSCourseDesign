@@ -319,3 +319,9 @@ ENTRY(sys_call_table)
 	.long sys_move_pages
 	.long sys_querysyscallcounter	/* 318 query the counter of the syscall */
 	.long sys_resetsyscallcounter	/* 319 reset the counter of the syscall */
+	.long sys_querypagefaultcounter	/* 320 query the counter of the page fault */
+	.long sys_resetpagefaultcounter /* 321 reset the counter of the page fault */
+
+
+
+

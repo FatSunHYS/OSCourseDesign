@@ -600,5 +600,8 @@ asmlinkage long sys_set_robust_list(struct robust_list_head __user *head,
 asmlinkage long sys_querysyscallcounter( unsigned int syscall_number );
 asmlinkage long sys_resetsyscallcounter( void );
 
+asmlinkage long sys_querypagefaultcounter( void );
+asmlinkage long sys_resetpagefaultcounter( void );
+
 
 #endif

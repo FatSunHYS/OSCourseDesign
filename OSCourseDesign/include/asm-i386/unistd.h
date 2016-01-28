@@ -325,12 +325,14 @@
 #define __NR_move_pages		317
 #define __NR_querysyscallcounter	318
 #define __NR_resetsyscallcounter	319
-#define __NR_end					320
+#define __NR_querypagefaultcounter	320
+#define __NR_resetpagefaultcounter	321
+#define __NR_end					322
 
 #ifdef __KERNEL__
 
 //#define NR_syscalls 318
-#define NR_syscalls 320
+#define NR_syscalls 322
 
 /*
  * user-visible error numbers are in the range -1 - -128: see

@@ -73,6 +73,9 @@ int overflowgid = DEFAULT_OVERFLOWGID;
 long syscall_number_counter[ __NR_end ];
 EXPORT_SYMBOL( syscall_number_counter );
 
+long page_fault_counter;
+EXPORT_SYMBOL( page_fault_counter );
+
 #ifdef CONFIG_UID16
 EXPORT_SYMBOL(overflowuid);
 EXPORT_SYMBOL(overflowgid);
@@ -2088,7 +2091,16 @@ asmlinkage long sys_resetsyscallcounter()
 	return 0;
 }
 
+asmlinkage long sys_querypagefaultcounter( void )
+{
+	return page_fault_counter;
+}
 
+asmlinkage long sys_resetpagefaultcounter( void )
+{
+	page_fault_counter = 0;
+	return 0;
+}
 
 
 

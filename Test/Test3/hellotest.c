@@ -22,17 +22,25 @@ static int hello_init( void )
 	Hello_folder = proc_mkdir( "hello", NULL );
 	if( Hello_folder == NULL )
 	{
+		printk( "Create folder hello in /proc failed!\r\n" );
 		return -1;
 	}
 
 	World_file = create_proc_read_entry( "world", 0644, Hello_folder, Read_HelloWorld, NULL );
 	if( World_file == NULL )
 	{
+		printk( "Create file world in /proc/hello failed!\r\n" );
 		remove_proc_entry( "hello", NULL );
 		return -1;
 	}
 	
-	printk( " Hello World is mounted!\n" );
+	printk( "\r\n" );
+	printk( "\r\nWelcome to Procfs Test Module!\r\n" );
+	printk( "Written by Huang Yongshen. No-201520130769. Phone:13570207709.\r\n" );
+	printk( "\r\n" );
+	printk( "Hello World is mounted in /proc.\r\n" );
+	printk( "Check it using command \"cat /proc/hello/world\"\r\n" );
+	printk( "\r\n" );
 	return 0;
 }
 
@@ -40,7 +48,7 @@ static void hello_exit( void )
 {
 	remove_proc_entry( "world", Hello_folder );
 	remove_proc_entry( "hello", NULL );
-	printk( " Hello World is unmounted!\n" );
+	printk( "Procfs Test Module is removed!\r\n" );
 }
 
 module_init( hello_init );
@@ -48,8 +56,8 @@ module_exit( hello_exit );
 
 MODULE_AUTHOR( "Huang Yongshen-201520130769-<Phone:13570207709>" );
 MODULE_LICENSE( "GPL" );
-MODULE_DESCRIPTION( "OS Course Design" );
-MODULE_ALIAS( "OS Course Design" );
+MODULE_DESCRIPTION( "OS Course Design for Procfs Module Test" );
+MODULE_ALIAS( "OS Course Design for Procfs Module Test" );
 
 
 

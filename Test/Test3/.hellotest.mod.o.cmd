@@ -1,7 +1,7 @@
-cmd_/home/fatsun/Test/Test3/hellotest.mod.o := gcc -m32 -Wp,-MD,/home/fatsun/Test/Test3/.hellotest.mod.o.d  -nostdinc -isystem /usr/lib/gcc/i686-pc-linux-gnu/4.0.3/include -D__KERNEL__ -Iinclude  -include include/linux/autoconf.h -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Os -pipe -msoft-float -mpreferred-stack-boundary=2  -march=athlon -mregparm=3 -ffreestanding -Iinclude/asm-i386/mach-default -fomit-frame-pointer  -Wdeclaration-after-statement -Wno-pointer-sign    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(hellotest.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(hellotest)" -DMODULE -c -o /home/fatsun/Test/Test3/hellotest.mod.o /home/fatsun/Test/Test3/hellotest.mod.c
+cmd_/root/Test/Test3/hellotest.mod.o := gcc -m32 -Wp,-MD,/root/Test/Test3/.hellotest.mod.o.d  -nostdinc -isystem /usr/lib/gcc/i686-pc-linux-gnu/4.0.3/include -D__KERNEL__ -Iinclude  -include include/linux/autoconf.h -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Os -pipe -msoft-float -mpreferred-stack-boundary=2  -march=athlon -mregparm=3 -ffreestanding -Iinclude/asm-i386/mach-default -fomit-frame-pointer  -Wdeclaration-after-statement -Wno-pointer-sign    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(hellotest.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(hellotest)" -DMODULE -c -o /root/Test/Test3/hellotest.mod.o /root/Test/Test3/hellotest.mod.c
 
-deps_/home/fatsun/Test/Test3/hellotest.mod.o := \
-  /home/fatsun/Test/Test3/hellotest.mod.c \
+deps_/root/Test/Test3/hellotest.mod.o := \
+  /root/Test/Test3/hellotest.mod.c \
     $(wildcard include/config/module/unload.h) \
   include/linux/module.h \
     $(wildcard include/config/modules.h) \
@@ -289,6 +289,6 @@ deps_/home/fatsun/Test/Test3/hellotest.mod.o := \
   include/linux/vermagic.h \
   include/linux/utsrelease.h \
 
-/home/fatsun/Test/Test3/hellotest.mod.o: $(deps_/home/fatsun/Test/Test3/hellotest.mod.o)
+/root/Test/Test3/hellotest.mod.o: $(deps_/root/Test/Test3/hellotest.mod.o)
 
-$(deps_/home/fatsun/Test/Test3/hellotest.mod.o):
+$(deps_/root/Test/Test3/hellotest.mod.o):

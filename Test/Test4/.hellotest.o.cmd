@@ -1,7 +1,7 @@
-cmd_/root/Test/Test3/hellotest.o := gcc -m32 -Wp,-MD,/root/Test/Test3/.hellotest.o.d  -nostdinc -isystem /usr/lib/gcc/i686-pc-linux-gnu/4.0.3/include -D__KERNEL__ -Iinclude  -include include/linux/autoconf.h -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Os -pipe -msoft-float -mpreferred-stack-boundary=2  -march=athlon -mregparm=3 -ffreestanding -Iinclude/asm-i386/mach-default -fomit-frame-pointer  -Wdeclaration-after-statement -Wno-pointer-sign   -DMODULE -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(hellotest)"  -D"KBUILD_MODNAME=KBUILD_STR(hellotest)" -c -o /root/Test/Test3/hellotest.o /root/Test/Test3/hellotest.c
+cmd_/root/Test/Test4/hellotest.o := gcc -m32 -Wp,-MD,/root/Test/Test4/.hellotest.o.d  -nostdinc -isystem /usr/lib/gcc/i686-pc-linux-gnu/4.0.3/include -D__KERNEL__ -Iinclude  -include include/linux/autoconf.h -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Os -pipe -msoft-float -mpreferred-stack-boundary=2  -march=athlon -mregparm=3 -ffreestanding -Iinclude/asm-i386/mach-default -fomit-frame-pointer  -Wdeclaration-after-statement -Wno-pointer-sign   -DMODULE -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(hellotest)"  -D"KBUILD_MODNAME=KBUILD_STR(hellotest)" -c -o /root/Test/Test4/hellotest.o /root/Test/Test4/hellotest.c
 
-deps_/root/Test/Test3/hellotest.o := \
-  /root/Test/Test3/hellotest.c \
+deps_/root/Test/Test4/hellotest.o := \
+  /root/Test/Test4/hellotest.c \
   include/linux/init.h \
     $(wildcard include/config/modules.h) \
     $(wildcard include/config/hotplug.h) \
@@ -286,41 +286,10 @@ deps_/root/Test/Test3/hellotest.o := \
     $(wildcard include/config/mgeodegx1.h) \
     $(wildcard include/config/mgeode/lx.h) \
     $(wildcard include/config/regparm.h) \
-  include/linux/proc_fs.h \
-    $(wildcard include/config/proc/fs.h) \
-    $(wildcard include/config/proc/devicetree.h) \
-    $(wildcard include/config/proc/kcore.h) \
-  include/linux/fs.h \
-    $(wildcard include/config/dnotify.h) \
-    $(wildcard include/config/quota.h) \
-    $(wildcard include/config/inotify.h) \
-    $(wildcard include/config/epoll.h) \
-    $(wildcard include/config/auditsyscall.h) \
-    $(wildcard include/config/fs/xip.h) \
-    $(wildcard include/config/migration.h) \
-    $(wildcard include/config/security.h) \
-  include/linux/limits.h \
-  include/linux/ioctl.h \
-  include/asm/ioctl.h \
-  include/asm-generic/ioctl.h \
-  include/linux/kdev_t.h \
-  include/linux/dcache.h \
-    $(wildcard include/config/profiling.h) \
-  include/linux/radix-tree.h \
-  include/linux/prio_tree.h \
-  include/linux/quota.h \
-  include/linux/dqblk_xfs.h \
-  include/linux/dqblk_v1.h \
-  include/linux/dqblk_v2.h \
-  include/linux/nfs_fs_i.h \
-  include/linux/nfs.h \
-  include/linux/sunrpc/msg_prot.h \
-  include/linux/fcntl.h \
-  include/asm/fcntl.h \
-  include/asm-generic/fcntl.h \
-    $(wildcard include/config/64bit.h) \
-  include/linux/err.h \
+  include/linux/device.h \
+  include/linux/ioport.h \
+  include/linux/klist.h \
 
-/root/Test/Test3/hellotest.o: $(deps_/root/Test/Test3/hellotest.o)
+/root/Test/Test4/hellotest.o: $(deps_/root/Test/Test4/hellotest.o)
 
-$(deps_/root/Test/Test3/hellotest.o):
+$(deps_/root/Test/Test4/hellotest.o):

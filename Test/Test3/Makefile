@@ -1,4 +1,4 @@
-obj-m:=hellotest.o
+obj-m:=ProcfsTest.o
 
 all:
 	make -C ~/OSCourseDesign SUBDIRS=$(shell pwd) modules
